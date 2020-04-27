@@ -26,7 +26,7 @@ SNMP SET, oraz SNMP GETNEXT requests.
 
 ![tree](tree.PNG)
 
-![type](Primitive type SMI.PNG)
+![type](SMI.PNG)
 
 ![ber2](ber2.PNG)
 
