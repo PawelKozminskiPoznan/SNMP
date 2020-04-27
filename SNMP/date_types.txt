@@ -1,0 +1,194 @@
+INTEGER
+OCTET STRING
+OBJECT IDENTIFIER
+NULL
+ObjectName
+ObjectSyntax
+CHOICE
+ simple
+ application-wide
+SimpleSyntax
+CHOICE
+ number
+ string
+ object
+ empty
+ApplicationSyntax
+CHOICE
+ address
+ counter
+ gauge
+ ticks
+ arbitrary
+NetworkAddress
+CHOICE
+ internet
+IpAddress
+Counter
+Gauge
+TimeTicks
+Opaque
+DisplayString
+PhysAddress
+IfEntry
+ ifIndex
+ ifDescr
+ ifType
+ ifMtu
+ ifSpeed
+ ifPhysAddress
+ ifAdminStatus
+ ifOperStatus
+ ifLastChange
+ ifInOctets
+ ifInUcastPkts
+ ifInNUcastPkts
+ ifInDiscards
+ ifInErrors
+ ifInUnknownProtos
+ ifOutOctets
+ ifOutUcastPkts
+ ifOutNUcastPkts
+ ifOutDiscards
+ ifOutErrors
+ ifOutQLen
+ ifSpecific
+AtEntry
+ atIfIndex
+ atPhysAddress
+ atNetAddress
+IpAddrEntry
+ ipAdEntAddr
+ ipAdEntIfIndex
+ ipAdEntNetMask
+ ipAdEntBcastAddr
+ ipAdEntReasmMaxSize
+IpRouteEntry
+ ipRouteDest
+ ipRouteIfIndex
+ ipRouteMetric
+ ipRouteMetric
+ ipRouteMetric
+ ipRouteMetric
+ ipRouteNextHop
+ ipRouteType
+ ipRouteProto
+ ipRouteAge
+ ipRouteMask
+ ipRouteMetric
+ ipRouteInfo
+IpNetToMediaEntry
+ ipNetToMediaIfIndex
+ ipNetToMediaPhysAddress
+ ipNetToMediaNetAddress
+ ipNetToMediaType
+TcpConnEntry
+ tcpConnState
+ tcpConnLocalAddress
+ tcpConnLocalPort
+ tcpConnRemAddress
+ tcpConnRemPort
+UdpEntry
+ udpLocalAddress
+ udpLocalPort
+EgpNeighEntry
+ egpNeighState
+ egpNeighAddr
+ egpNeighAs
+ egpNeighInMsgs
+ egpNeighInErrs
+ egpNeighOutMsgs
+ egpNeighOutErrs
+ egpNeighInErrMsgs
+ egpNeighOutErrMsgs
+ egpNeighStateUps
+ egpNeighStateDowns
+ egpNeighIntervalHello
+ egpNeighIntervalPoll
+ egpNeighMode
+ egpNeighEventTrigger
+DisplayString (SIZE (5))
+DisplayString (SIZE (0..255))
+INTEGER (0..127)
+SEQUENCE OF IfEntry
+INTEGER {
+ other
+ regular1822
+ hdh1822
+ ddn-x25
+ rfc877-x25
+ ethernet-csmacd
+ iso88023-csmacd
+ iso88024-tokenBus
+ iso88025-tokenRing
+ iso88026-man
+ starLan
+ proteon-10Mbit
+ proteon-80Mbit
+ hyperchannel
+ fddi
+ lapb
+ sdlc
+ ds1
+ e1
+ basicISDN
+ primaryISDN
+ propPointToPointSerial
+ ppp
+ softwareLoopback
+ eon
+ ethernet-3Mbit
+ nsip
+ slip
+ ultra
+ ds3
+ sip
+ frame-relay
+INTEGER {up
+ up
+ down
+ testing
+SEQUENCE OF AtEntry
+INTEGER {forwarding
+ forwarding
+ not-forwarding
+SEQUENCE OF IpAddrEntry
+INTEGER (0..65535)
+SEQUENCE OF IpRouteEntry
+INTEGER {other
+ other
+ invalid
+ direct
+ indirect
+SEQUENCE OF IpNetToMediaEntry
+SEQUENCE OF TcpConnEntry
+INTEGER {closed
+ closed
+ listen
+ synSent
+ synReceived
+ established
+ finWait1
+ finWait2
+ closeWait
+ lastAck
+ closing
+ timeWait
+ deleteTCB
+SEQUENCE OF UdpEntry
+SEQUENCE OF EgpNeighEntry
+INTEGER {idle
+ idle
+ acquisition
+ down
+ up
+ cease
+INTEGER { active(1), passive(2) }
+ active
+ passive
+INTEGER { start(1), stop(2) }
+ start
+ stop
+INTEGER { enabled(1), disabled(2) }
+ enabled
+ disabled
