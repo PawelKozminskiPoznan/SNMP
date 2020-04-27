@@ -25,8 +25,11 @@ Program should read MIB file, use BER coder to send date by internet and recive 
 SNMP SET, oraz SNMP GETNEXT requests.
 
 ![tree](tree.PNG)
+MIB tree
 
 ![type](SMI.PNG)
+
+Primitive types SMI
 
 ![ber2](ber2.PNG)
 
